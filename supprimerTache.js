@@ -9,7 +9,17 @@ function supprimerTache(x){
 //Mise à jour du compteur.
     var compteurTache = localStorage.getItem("compteurTache");
     localStorage.setItem("compteurTache", compteurTache-1);
-    location.reload();
+    //location.reload();
+    if(localStorage!=null){
+    	//Pas logique mais ça fonctionne xD
+    	if (compteurTache == 0) {
+        	nbtache.innerHTML = `<span>Il y a `+ (compteurTache-1) +` tâche</span>`;
+    	}else if(compteurTache > 1){
+        nbtache.innerHTML = `<span>Il y a `+ (compteurTache-1) +` tâches</span>`;
+    	}else if(compteurTache == 1){
+    		nbtache.innerHTML = `<span>Il n'y a aucune tâche</span>`;
+    	}
+	}
 }
 
 //Bon à savoir : supprimer.className = "NoN";

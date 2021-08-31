@@ -18,7 +18,7 @@ function ajoutTODO(){
         let compteurTache = parseInt(localStorage.getItem("compteurTache"));
         localStorage.setItem("tache" + compteur, newTache);
         localStorage.setItem("compteur", compteur + 1);
-        localStorage.setItem("compteurTache", compteur + 1);
+        localStorage.setItem("compteurTache", compteurTache + 1);
         //Afficher la tâche.
         nouvelleEmplacementTache.id = "tache"+compteur;
         nouvelleEmplacementTache.innerHTML = `<li>${compteur+1}) ${newTache}</li>
