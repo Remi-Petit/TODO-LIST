@@ -20,6 +20,8 @@ function supprimerTache(x){
     		nbtache.innerHTML = `<span>Il n'y a aucune tâche</span>`;
     	}
 	}
+	//Redirige sur la zone de texte.
+    document.getElementById("inputId").focus();
 }
 
 //Bon à savoir : supprimer.className = "NoN";
